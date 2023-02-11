@@ -64,4 +64,34 @@ print(nums2.count(5)) # 1
 # index(n): n의 인덱스 값 반환
 print(nums2.index(1)) # 1의 인덱스는 0
 
+## list slicing
+nums = [3, 5, 1, 4, 2]
+slice_nums = nums[2:4]
+print(nums, slice_nums)
 
+print(nums[:2])
+print(nums[1:])
+
+# 인덱스 값 초과해도 에러가 나지 않음
+print(nums[2:100])
+
+# 리스트 카피, 얕은 복사
+nums2 = nums # 같은 객체를 가리키어 id 값이 동일함
+
+copied_nums = nums[:]
+print(copied_nums)
+reserved_nums = nums[::-1]
+print(reserved_nums)
+
+# 얕은 복사 시에는 id 값이 분리되므로 변경 시, 영향을 주지 않음
+nums[0] = 100
+print(nums, copied_nums)
+print(nums2)
+
+# 슬라이싱 삽입
+nums[1:2] = [9, 10, 11]
+print(nums)
+
+# 특정 부분 깔끔하게 도려냄
+nums[2:4] = []
+print(nums)
