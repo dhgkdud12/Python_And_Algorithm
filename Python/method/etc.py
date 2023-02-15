@@ -20,3 +20,13 @@ print(list(zip(a, b))) # 세로로 찝은 결과를 튜플로 만들기 - zip �
 
 # 레인지와 리스트를 찝어서 딕셔너리 형태로 제작
 print(dict(zip(range(3), [0]*3)))
+
+# enumerate
+nums = [2, 4, 5]
+
+# 반복문에서 인덱스 값까지 같이 뽑기
+for idx, num in enumerate(nums):
+    print(idx, num)
+
+nums = [5, 3, 7, 2, 8, 1]
+print(max(nums), min(nums), sum(nums), len(nums))
